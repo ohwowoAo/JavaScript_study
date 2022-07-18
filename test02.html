@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let message = 
+        // (login == '직원') ? '안녕하세요' : 
+        // (login == '임원' ? '환영합니다' : 
+        // (login == ''? '로그인이 필요합니다.' : ''))
+        let browser = 'safari';
+        if( browser == 'Edge'){
+            console.log('Edge를 사용하시네요!');
+        }else if(browser == 'Chrome' || browser == 'Firefox' || browser == 'safari' || browser == 'Opera'){
+            console.log('저희 서비스가 지원하는 브라우저 사용하시네요!');
+        }else{
+            console.log('현재페이지가 괜찮아보이길 바랍니다!');
+        }
+
+        // switch( a = +prompt('a?','')){
+        //     case ( 0 ) : 
+        //         alert( 0 );
+        //         break;
+        //     case ( 1 ) :
+        //         alert( 1 );
+        //         break;
+        //     case ( 2 ) :
+        //     case ( 3 ) :
+        //         alert( '2,3' );
+        //         break;
+        // }
+
+        // for (let sum = 0; sum < 3; sum++){
+        //     console.log(sum);
+        // }
+        // let i = 0;
+        // while ( i <3 ){
+        //     i ++;
+        //     console.log(`number ${i}`);
+        // }
+        // let lineCount = 30;
+        // for(let i = 0; i < lineCount; i++){
+        //     for(let j = lineCount; j > i; j--){
+        //         document.write('&nbsp');
+        //     }
+        //     for( let j = 0; j <= i; j++){
+        //         document.write('*');
+        //     }
+        //     for(let j=1; j <= i; j++)  {
+        //         document.write('*');
+        //     }
+        //     document.write('<br>');
+        // }
+
+        // let lineCount = '';
+        // for(let i = 0; i < 3; i++){
+        //     for(let j = 4; j > i; j--){
+        //         lineCount += ' ';
+        //     }
+        //     for (var k = 0; k <= (i * 2); k++) {
+        //         lineCount += '*';
+        //     }
+        //     lineCount += '\n';
+        // }
+        // console.log(lineCount);
+
+        // let lineCount = 10;
+        // let result = '';
+        // for (let i = 1; i < lineCount * 2; i += 2) {
+        // for (let j = 1; j < (lineCount * 2 - i) / 2; j++) {
+        //     result += ' ';
+        // }
+        // for (let l = 1; l <= i; l++) {
+        //     result += '*';
+        // }
+        // result += '\n';
+        // }
+        // console.log(result);
+
+      //   let lineCount = 10;
+      // let line = "";
+
+      // for (let i = 1; i <= lineCount; i++) {
+      //   for (let k = 1; k <= lineCount - i; k++) {
+      //     line += " ";
+      //   }
+      //   for (let j = 1; j <= 2 * i - 1; j++) {
+      //     line += "*";
+      //   }
+      //   console.log(line);
+      //   line = "";
+      // }
+      for(let i = 1; i <= 100; i++){
+        if(i % 7 === (2 || 5)){
+          console.log(i);
+        }
+      }
+      
+    </script>
+   
+</body>
+</html>
