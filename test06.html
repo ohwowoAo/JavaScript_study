@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            
+        }
+        /* .box:nth-child(odd){
+            background-color: blue;
+        }    */
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <input class="plusL" type = 'number' />+
+    <input class="plusR" type = 'number' />=
+    <input class="answer" type = 'number' />
+    <button>더하기</button>
+    <script>
+        // for( let i = 0; i < 5; i ++){
+        //     let newdiv = document.createElement('div');
+        //     document.body.appendChild(newdiv);
+        //     if( i % 2 === 0 ){
+        //         newdiv.className = 'box red'
+        //     }else{
+        //         newdiv.className = 'box blue'
+        //     }
+        // }
+        // const input = document.querySelector('input');
+        // input.addEventListener("change",function(e){
+        //     console.log(e.target.value)
+        //     //바뀌고 엔터쳤을때
+        // })
+        // input.addEventListener("keydown",function(e){
+        //     console.log(e.target.value)
+        //     //키를 눌렀을때
+        // })
+        // input.addEventListener("keyup",function(e){
+        //     console.log(e.target.value)
+        //     //키를 뗐을때
+        // })
+        // input.addEventListener("keypress",function(e){
+        //     console.log(e.target.value)
+        //     //키를 누르고있는 순간동안
+        // })
+        const btn = document.querySelector('button');
+        const plusL = document.querySelector('.plusL');
+        const plusR = document.querySelector('.plusR');
+        const answer = document.querySelector('.answer');
+
+        btn.addEventListener("click", function(){
+            // let inputV = input.value;
+            // console.log(inputV)
+            // //변수에 담는 방법
+
+            // console.log(input.value)
+            // //바로 접근하는 방법
+            answer.value = Number(plusL.value) + Number(plusR.value)
+        })
+    </script>
+</body>
+</html>
