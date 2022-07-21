@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <form> -->
+        <input type="text" placeholder="색을 입력하고 enter"/>
+    <!-- </form> -->
+    <!-- <div class="text">
+        div내 text가 변경됩니다.
+    </div> -->
+    <div></div>
+    <script>
+        const input = document.querySelector('input');
+        // const text = document.querySelector('.text');
+        const box = document.querySelector('div');
+
+        // input.addEventListener('keydown', (e)=>{
+        //     if(e.key === 'Enter'){
+        //         // e.preventDefault();
+        //         let newdiv = document.createElement('div');
+        //         document.body.appendChild(newdiv);
+        //         newdiv.innerText = e.target.value;
+        //         e.target.value = ''
+        //     }
+        // })
+        input.addEventListener('keydown', (e)=>{
+            if(e.key === 'Enter'){
+                let newdiv = document.createElement('div');
+                document.body.appendChild(newdiv);
+                newdiv.className = 'box';
+                newdiv.style.backgroundColor = e.target.value;
+                e.target.value = ''
+            }
+        })
+        box.addEventListener('click', function(){
+            this.parentNode.removeChild(this)
+        })
+    </script>
+</body>
+</html>
