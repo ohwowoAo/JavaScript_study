@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const original = [1, 5, 2, 3]; 
+        // const mapFunction = (item, index) => { 
+        //     const obj = { item, index }; 
+        //     console.log(obj); 
+        //     // return original[index];  
+        //     return item;  
+        // }                             
+        // // original.map 을 호출시 매개변수로 넣은 callback함수가 반환하는 값을 모아서 
+        // // original 배열과 같은 길이의 새로운 배열을 만들어줌  
+        // const a = original.map(mapFunction); 
+        // console.log(a);
+
+
+        /*******************************/
+        // const original = [1, 5, 2, 3]; 
+        // const mapFunction = (item, index) => { 
+        //     const obj = { item, index }; 
+        //     console.log(obj); 
+        //     const result = item * 2;
+        //     return result;  
+        // }                              
+        // const a = original.map(mapFunction); 
+        // console.log(a);
+        
+        /*******************************/
+        // const original = [{ a: 1 }, { a: 5 }, { a: 2 }, { a: 3 }]; 
+        // const mapFunction = (item, index) => { 
+        // const obj = { item, index }; 
+        // console.log(obj); 
+        // const result = item.a * 2;
+        // return result;  
+        // }                             
+ 
+        // const a = original.map(mapFunction); 
+        // console.log(a);
+
+
+/*******************************/ 
+        // const original = [{ a: 1 }, { a: 5 }, { a: 2 }, { a: 3 }]; 
+        // const mapFunction = (item, index) => { 
+        // const result = item.a * 2;
+        // return {a : result};   
+        // }                             
+        // const a = original.map(mapFunction); 
+        // console.log(JSON.stringify(a));
+
+        // 축소판 : const mapFunction = ({a}) => ({a : a * 2});   
+
+        /*******************************/   
+        // const original = [{ a: 1 }, { a: 5 }, { a: 2 }, { a: 3 }]; 
+        // const findFunction = (item, index) => { 
+        //     const obj = { item, index }; 
+        //     console.log(obj); 
+        //     return item.a === 5; 
+        // }                             
+        // // original.find 를 호출시 매개변수로 넣은 callback함수가 
+        // // true를 반환할 경우의 item 을 반환 
+        // const a = original.find(findFunction); 
+        // console.log(a);
+
+
+        //************************************************/
+
+        
+        const arr = [{ 
+            name: 'kim', 
+            age: 10, 
+            }, { 
+            name: 'choi', 
+            age: 13, 
+            }, { 
+            name: 'jin', 
+            age: 20, 
+            }, { 
+            name: 'woo', 
+            age: 50, 
+            }, { 
+            name: 'woo', 
+            age: 20, 
+            }, { 
+            name: 'woo', 
+            age: 30, 
+        }]; 
+
+
+        function findAge(name){
+            arr.forEach((a,i) =>{
+                if(arr[i].name === name.toLowerCase().trim()){
+                    let sum = arr[i].age;
+                    sum = sum.sort();
+                    console.log(sum);
+                }
+            })
+            
+        }
+        // findAge('jin');
+            // findAge(' jIN'); // [20];       
+            // findAge(' wOO   '); // [50, 30, 20]
+    </script>
+    
+</body>
+</html>
