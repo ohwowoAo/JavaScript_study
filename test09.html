@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id ="input" type="number" />
+    <button id="button">Click Me!</button>
+    <!-- <button id="end">끝</button> -->
+    <div id="count"></div>
+
+    <script>
+        let Btn = document.getElementById('button');
+        let end = document.getElementById('end');
+        let count = document.getElementById('count');
+        let input = document.getElementById('input');
+        
+        // Btn.addEventListener('click', function(){
+        //     // setTimeout(() => {console.log(input.value)}, 3000);
+        //     let interval = setInterval(function(){
+        //         console.log(input.value);
+        //     }, 1000);
+        //     end.addEventListener('click', function(){
+        //         clearInterval(interval);
+        //     })
+        // })
+
+
+        // const [startBtn, endBtn] = document.querySelectorAll('button');
+        // const inputEl = document.querySelector('input');
+        // let timerIds = [];
+        // function consoleLog () {
+        // console.log(inputEl.value)
+        // }
+        // startBtn.addEventListener('click', () => {
+        // const newTimerId = window.setInterval(consoleLog, 1000);
+        // timerIds.push(newTimerId);
+        // })
+        // endBtn.addEventListener('click', () => {
+        // timerIds.forEach(item => {
+        //     clearTimeout(item);
+        //     console.log(`timerId ${item} 중지!!`);
+        // })
+        // timerIds = [];
+        // })
+
+        Btn.addEventListener('click', function(){
+            let num = 11;
+            setTimeout(() => {console.log(input.value)}, 10000);
+            setInterval(() => {
+                num --;
+                count.innerText = num;
+                if(num <= 0){
+                    count.innerText = '멈춤!';
+                }
+            }, 1000);
+        })
+    </script>
+</body>
+</html>
